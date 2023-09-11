@@ -34,3 +34,9 @@ The process from RTL (Register-Transfer Level) to GDS2 (Graphic Data System 2) i
 ### Synthesis
 
 ![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/e6a2b457-f3d9-4294-bae2-cc6661268c5f)
+
+### Floorplan
+
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/5b88266c-ae11-4963-a73a-4b565c4427d6)
+
+
