@@ -6,10 +6,7 @@ OpenLane is an automated RTL to GDSII flow based on several components including
 You can check out the documentation, including in-depth guides and reference manuals at [ReadTheDocs](https://openlane.readthedocs.io/).
 
 
-<p align="center">
-  <img src="![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/2a91faea-14de-4dab-bcba-a61619ad065b)
-" >
-</p>
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/aeca0f43-27b6-46f4-a6cb-a817176f2e8e)
 
 
 
