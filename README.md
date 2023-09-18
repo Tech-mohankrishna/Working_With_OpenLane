@@ -230,7 +230,7 @@ To view the layout of the floorplan, use the command ```magic -T /home/vsduser/D
 
 ```run_placement```
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/b62a3823-a7eb-4806-b195-b5f6b73c03b5)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/0a04c130-a65b-4004-b0d0-2c1d66c95942)
 
 ## Cell Design Flow
 
