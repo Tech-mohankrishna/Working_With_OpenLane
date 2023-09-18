@@ -591,21 +591,18 @@ In OpenROAD the timing analysis is done by creating a .db database file. This da
 - set the clocks
 - generate the reports
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/74edcca7-9519-4269-a2b9-2fafdeef4e66)
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/02cf90b0-d02b-411d-847b-be6159e74502)
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/a5c62171-3c46-482d-8ad5-d7700774d1ec)
+![openroad_steps](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/6fae45f8-8027-4313-9deb-51af99005568)
+![my_base](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/222858cb-6cb5-4ab5-aeba-478b9e5787ff)
 
 The results wont meet the timing because we are using min and max lib files and openroad doesnot support multi corner optimisation. Therefore we do it using only typical corner lib
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/e3687d97-556d-4b81-8261-0c78aba74d13)
+![my_base_results](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/07ffd710-8025-4f20-8359-f74ef6593ea7)
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/843fce06-f1d1-4469-92d4-b9b1b4a82b91)
-
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/928a49af-78b3-4e0e-a8b2-5c2bf7589f20)
 
 We have to ensure that the skew is withing 10% of clock period ie., should be less than 1.6 in my case
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/dbd809aa-dcda-43a1-97da-9f0ab81fbf08)
+![hold_setup](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/90e3d0fc-aa81-4692-a49f-f4c200ee3b4e)
+
 
 [BACK TO TOP](https://github.com/yagnavivek/PES_OpenLane_PD#to-enter-the-automated-flow-use-these-commands)
 
@@ -626,7 +623,8 @@ The PDN feature within OpenLANE will create:
 - Power straps to bring power into the center of the chip
 - Power rails for the standard cells
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/b4fd0fda-f775-4b33-9aa8-c9a252ff19ab)
+
+![gen_pdn](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/37102347-af71-43bd-95ed-9f1b2aae91ac)
 
 Note: The pitch of the metal 1 power rails defines the height of the standard cells
 
