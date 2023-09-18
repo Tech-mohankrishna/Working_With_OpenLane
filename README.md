@@ -137,45 +137,32 @@ Here's a detailed ASIC design flow using OpenLane and the associated tools and s
 
 ## Chip Floorplanning Considerations
 
-### 1. Define Width and height of core and die
+Certainly, here's a more concise version of the considerations for chip floorplanning:
 
-- ```Die``` : Structure that consists of core which is a small semiconductor material on which the fundamental circuit is fabricated.
-- ```core``` : Structire that contains primary logic and functional components.
+1. **Core and Die Dimensions:**
+   - **Die:** The base structure containing the core, where the fundamental circuit is built.
+   - **Core:** Contains the primary logic and functional components.
+   - **Utilization Factor:** The ratio of netlist area to the core area (typically 50%-70%).
+   - **Aspect Ratio:** The ratio of height to width (1 for a square, otherwise a rectangle).
 
-Whenever we come across the concepts of core and die, ```Utilisation factor``` plays an important role.
-UTILISATION FACTOR = Area Occupied by the Netlist / Area of the core (usually 50%-70%)
-ASPECT RATIO = Height / Width (1 = square, others = rectangle)
+2. **Pre-Placed Cells:**
+   - These are fixed components like memories, clock gating cells, comparators, etc., with user-defined locations.
+   - Automated tools place the remaining logical cells onto the chip.
 
-### 2. Define Location of Pre-Placed cells
+3. **De-Coupling Capacitors:**
+   - Used to combat voltage drop during large circuit operation.
+   - Placed close to combinational logic to act as a power supply during voltage drop.
 
-```pre-placed cells``` : memories, clock gating cells, comparator, mux etc
+4. **Power Planning:**
+   - Crucial for reducing noise due to voltage droop and ground bounce.
+   - Involves creating a robust power distribution network (PDN) with many power taps to minimize resistance.
+   - Ensures efficient charging and discharging of coupling capacitors.
 
-- The arrangement of these IPs on chip is called FLOORPLANNING
-- These IPs have user defined locations and hence are placed in chip before automated placement and routing. Therefore called pre-placed cells.
-- Automated PnR tool places the remaining logical cells in design onto chip.
-
-### 3. De-coupling capacitors
-
-_____Problem_____
-We know that all the combinational blocks are connected to Vdd and Vss for their operation. But when there is a large circuit with many resistors, then The capacitors in the logic might not get fully charged as there occurs voltage deop due to wire metal and the resistors present along the path. So after voltage drop, if the voltage obtained by the logic is within noise margin, then it works well but what if it doesn't? 
-
-_____Solution_____
-We use De-Coupling capacitors (A huge capacitance with voltage equal to that of supply voltage) that is placed close to the combinational logic. When the switching activity takes place, it detatches the circuit from main supply and this capacitor acts as power supply.
-
-The local communication has been successfully eshtablished with the solution mentioned above. The global communication is taken care by power planning.
-
-### 4. Power Planning
-
-- Power planning during the Floorplanning phase is essential to lower noise in digital circuits attributed to voltage droop and ground bounce. Coupling capacitance is formed between interconnect wires and the substrate which needs to be charged or discharged to represent either logic 1 or logic 0.
-- When a transition occurs on a net, charge associated with coupling capacitors may be dumped to ground. If there are not enough ground taps charge will accumulate at the tap and the ground line will act like a large resistor, raising the ground voltage and lowering our noise margin. To bypass this problem a robust PDN with many power strap taps are needed to lower the resistance associated with the PDN.
-
-### 5. Pin Placement
-
-- ```Pin placement``` is an essential part of floorplanning to minimize buffering and improve power consumption and timing delays.
-- We usually place input pins on the left and output pins on the right
-- for primary inputs and outputs, pin size may be small and for clock, the pin size would be large because clock should drive many cells so we need to make sure that the resistance is less.
-- larger the area, lesser the resistance.
-- ```Placement blockage``` is done inorder to makesure that no logic is placed along the area where the pin placement is carried out.
+5. **Pin Placement:**
+   - Essential for optimizing buffering, power consumption, and timing.
+   - Input pins are often placed on the left, output pins on the right.
+   - Clock pins may have larger sizes to drive more cells efficiently.
+   - Placement blockage is used to reserve space for pins, preventing logic placement in these areas.
 
 ## Floorplan
 
