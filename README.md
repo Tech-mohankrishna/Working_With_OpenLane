@@ -1,4 +1,4 @@
-# ☑️ OPENLANE ☑️
+# ✅ OPENLANE ✅
 
 ## :book: ABOUT THE REPOSITORY
 OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, KLayout and a number of custom scripts for design exploration and optimization. The flow performs all ASIC implementation steps from RTL all the way down to GDSII.
@@ -12,7 +12,8 @@ You can check out the documentation, including in-depth guides and reference man
 
 
 # TABLE OF CONTENTS
-+ Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK
+
++ Day 1️⃣  : Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 + [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
