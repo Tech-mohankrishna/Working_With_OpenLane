@@ -403,7 +403,8 @@ magic -T sky130A.tech sky130_inv.mag
 
 Select the specific layer/device by hovering over the object and pressing, s, iteratively, until you traverse the hierarchy to the specified object:
 
-![Screenshot from 2023-09-12 18-15-54](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/1a918a4c-da78-4c9f-b553-e080ddd3e7e7)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/a040cf5b-77c0-49f9-9e96-05b21b71fbfd)
+
 
 - select a region from the layout, go to the console and type ```what``` to display the information of selected area
 - To select a region, place ```cursor``` on that point and  press```s```. More the number of times you press ```s```, higher the abstraction selected.
@@ -426,9 +427,11 @@ For more information on how to fix these DRC errors using Magic please refer to:
 
 Select Full inverter layout. Then
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/36c93dc8-6c1e-4ac4-9eac-f2c7a001b82a)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/1731e6ad-714a-43ee-8895-cddc501c605b)
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/e58613be-86ee-4248-8298-ef002274429b)
+
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/4fab9429-4b95-4962-99d6-a9fd79566514)
+
 
 The above file has details of inverter netlist but the sources and their values are not specified. So we have to modify the file.
 
@@ -439,15 +442,18 @@ The above file has details of inverter netlist but the sources and their values 
 
 ### Grid Size
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/1fd94afe-3a40-4269-92ed-d7c46f248417)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/ae7e38a1-95df-43ee-81ed-4fa2c97afeae)
+
 
 ## Modified Spice netlist
 
-![Screenshot from 2023-09-14 17-25-22](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/21be1cbb-da31-4409-bf53-a3a80f11ac97)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/dead9f63-131a-4b89-9d87-5b3055d10dfd)
+
 
 To run the spice netlist, run ```ngspice sky130_inv.spice``` and ```plot y vs time a```
 
-![Screenshot from 2023-09-14 17-32-14](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/c3c56cb8-475c-41cb-a23e-4f596a46df98)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/78723ed0-f309-4461-8382-267e39d5bc93)
+
 
 The results obtained from the graph are :
 - Rise Transition : 0.0395ns
@@ -479,7 +485,8 @@ Track info can be found at :
 
 ``` ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130fd_sc_hd/tracks.info```
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/3b8e5311-039d-4351-be5c-6f6ec5ba7a84)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/9e4dc3b2-a47e-4c93-9edb-7aa227ce084b)
+
 
 - 1st value indicates the offset and 2nd value indicates the pitch along provided direction
 
@@ -489,9 +496,9 @@ Track info can be found at :
 
 Layout before setting grid info vs after setting grid info
 
-<img width="333" height="420" alt="image" src="https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/e85123af-bc48-4150-9694-cf105a99493c">
-<img width="333" height="420" alt="image" src="https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/1ad46a25-95e6-4fe6-836c-0b1e34d6eef5">
-<img width="333" height="420" alt="image" src="https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/d0a2753b-7216-43c9-ad9a-992feffcaa40">
+![before_grid_info](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/887cc1df-03fd-4596-92fc-f6162981cd0f)
+
+![after_grid_info](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/ec15a69d-7bfe-4256-8f79-35ed2140442a)
 
 - From the above pic, its confirmed that the pins A and Y are at the intersection of X and Y tracks. So the first condition is met.
 - The PR boundary is taking 3 grids on width and 9 grids on height which says that the 2nd condition is also met
@@ -508,16 +515,20 @@ Since the layout is perfect, we can generate the lef file
    - Open using ``` magic -T sky130A.tch sky130_vsdinv.mag```
    - in the console opened, type ```lef write``` and a lef file will be generated
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/02952069-8336-47d6-a94b-7798300139fc)
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/0e9d89de-6c57-4b98-8d8c-6d609b682b68)
+
 
 #### 3. Plug the generated lef file into PICORV32a
 
 To do this, we need the lef file, library file that has cells
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/00f25603-333a-4fed-9624-73b2737ec4fc)
+
+![image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/99a5d5e5-87cf-44ff-bf5c-badb7ee4982c)
+
 
 Change config file so that these libraries and lef file is used
 
-![Screenshot from 2023-09-14 15-46-16](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/7b474efc-df06-4cb8-8794-005226e4933c)
+![config](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/dce8f252-e08e-4c40-b790-51084de2237d)
+
 
 
 #### 4. Make sure the lef file is added
