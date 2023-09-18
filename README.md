@@ -13,7 +13,7 @@ You can check out the documentation, including in-depth guides and reference man
 
 # TABLE OF CONTENTS
 
-+ Day 1️⃣  : Inception of open-source EDA, OpenLANE and Sky130 PDK
++ [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
 + [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
@@ -51,7 +51,7 @@ You can check out the documentation, including in-depth guides and reference man
 <details>
 <summary>DAY 1 : Inception of opensource-EDA, Opennlane and Skywater130</summary>
 <br>
-
+# 📌 DAY-1
 
 ## RTL to GDS2 Flow
 The process from RTL (Register-Transfer Level) to GDS2 (Graphic Data System 2) in VLSI (Very Large Scale Integration) design involves several complex steps, each of which plays a crucial role in transforming a high-level hardware description into a final physical layout that can be fabricated as an ASIC (Application-Specific Integrated Circuit). Here's a detailed breakdown of these steps:
@@ -198,13 +198,6 @@ The local communication has been successfully eshtablished with the solution men
 
 ```run_floorplan```
 
-Before running floorplan, lets look into the switches available for the floorplan stage
-
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/2475b544-97d9-473c-b77f-2b07e167d1d6)
-
-Changes made in the config.tcl for floorplan purpose:
-
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/77f891bd-89f3-40f1-a64b-91ffdb993378)
 
 Now in openlane, enter ```run_floorplan``` and the results will be updated at the runs folder
 
