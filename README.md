@@ -15,27 +15,14 @@ You can check out the documentation, including in-depth guides and reference man
 
 + [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#inception-of-open-source-eda-openlane-and-sky130-pdk)
 
-+ [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#good-floorplan-vs-bad-floorplan-&-introduction-to-library-cells)
 
-+ [Day 3️⃣: Design Library cell using Magic Layout & NGSpice Characterization](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ [Day 3️⃣: Design Library cell using Magic Layout & NGSpice Characterization](#design-library-cell-using-magic-layout-&-ngspice-characterization)
 
-+ [Day 4️⃣: Pre-Layout Timing Analysis & Importance of good clock tree](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ [Day 4️⃣: Pre-Layout Timing Analysis & Importance of good clock tree](#pre-Layout-timing-analysis-&-importance-of-good-clock-tree)
 
 + [Day 5️⃣: Final Steps of RTL2GDS using tritonroute and OpenSTA](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 
@@ -140,9 +127,12 @@ Here's a detailed ASIC design flow using OpenLane and the associated tools and s
 
 [Back to main](#table-of-contents)
 
-<details>
-<summary>DAY 2 : Good Floorplan vs Bad Floorplan and Introduction to library cells</summary>
-<br>
+
+
+
+# 📌 DAY-2
+
+# Good Floorplan vs Bad floorplan & Introduction to Library Cells
 
 ## Chip Floorplanning Considerations
 
@@ -263,13 +253,16 @@ These are the main parameters that we use to calculate factors such as propogati
 - ```propogation delay ``` - time(out_*_thr) - time(in_*_thr)
 - ```Transition time``` - time(slew_high_rise_thr) - time(slew_low_rise_thr)
 
-[BACK TO TOP](https://github.com/yagnavivek/PES_OpenLane_PD#to-enter-the-automated-flow-use-these-commands)
+[Back to main](#table-of-contents)
 
-</details>
 
-<details>
-<summary>DAY 3 :  Design library cell </summary>
-<br>
+
+
+
+
+# 📌 DAY-3
+
+# Design Library cell using Magic Layout & NGSpice Characterization
 
 ## SPICE Deck creation for CMOS Inverter
 
@@ -453,12 +446,16 @@ The results obtained from the graph are :
 - Cell Rise delay : 0.03598ns
 - Cell fall delay : 0.0483ns
 
-[BACK TO TOP](https://github.com/yagnavivek/PES_OpenLane_PD#to-enter-the-automated-flow-use-these-commands)
+[Back to main](#table-of-contents)
 
-</details>
 
-<details>
-<summary>DAY 4 : Pre-Layout timing analysis and importance of good clock tree</summary>
+
+
+
+
+# 📌 DAY-4
+
+#  Pre-Layout Timing Analysis & Importance of good clock tree
 <br>
 
 ## Extraction of LEF 
@@ -608,13 +605,14 @@ We have to ensure that the skew is withing 10% of clock period ie., should be le
 ![hold_setup](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/90e3d0fc-aa81-4692-a49f-f4c200ee3b4e)
 
 
-[BACK TO TOP](https://github.com/yagnavivek/PES_OpenLane_PD#to-enter-the-automated-flow-use-these-commands)
+[Back to main](#table-of-contents)
 
-</details>
 
-<details>
-<summary>DAY 5 : Final steps for RTL2GDSII</summary>
-<br>
+
+
+# 📌 DAY-5
+
+# Final Steps of RTL2GDS using tritonroute and OpenSTA
 
 ## Power Distribution Network
 
@@ -655,10 +653,7 @@ python3 main.py <path to merged.lef in tmp> <path to def in routing>
 
 The SPEF File will be generated in the location where def file is present
 
-[BACK TO TOP](https://github.com/yagnavivek/PES_OpenLane_PD#to-enter-the-automated-flow-use-these-commands)
-
-
-</details>
+[Back to main](#table-of-contents)
 
 
 
