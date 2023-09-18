@@ -13,7 +13,7 @@ You can check out the documentation, including in-depth guides and reference man
 
 # TABLE OF CONTENTS
 
-+ [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#inception-of-open-source-eda-openlane-and-sky130-pdk)
 
 + [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
@@ -42,16 +42,9 @@ You can check out the documentation, including in-depth guides and reference man
 
 # COURSE CONTENT
 
-
-
-
-
-
-
-<details>
-<summary>DAY 1 : Inception of opensource-EDA, Opennlane and Skywater130</summary>
-<br>
 # 📌 DAY-1
+
+# Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 ## RTL to GDS2 Flow
 The process from RTL (Register-Transfer Level) to GDS2 (Graphic Data System 2) in VLSI (Very Large Scale Integration) design involves several complex steps, each of which plays a crucial role in transforming a high-level hardware description into a final physical layout that can be fabricated as an ASIC (Application-Specific Integrated Circuit). Here's a detailed breakdown of these steps:
@@ -145,11 +138,7 @@ Here's a detailed ASIC design flow using OpenLane and the associated tools and s
     - **Tools/Software**: 
       - Magic for GDS2 generation.
 
-
-
-</details>
-
-
+[Back to main](#table-of-contents)
 
 <details>
 <summary>DAY 2 : Good Floorplan vs Bad Floorplan and Introduction to library cells</summary>
