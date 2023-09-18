@@ -13,28 +13,28 @@ You can check out the documentation, including in-depth guides and reference man
 
 # TABLE OF CONTENTS
 
-+ [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#inception-of-open-source-eda-openlane-and-sky130-pdk)
++ [Day 1️⃣ : Inception of open-source EDA, OpenLANE and Sky130 PDK](#inception-of-open-source-eda-openlane-and-sky130-pdk)
   - SOC Design and OpenLane
   - Get Familiar to OpenSource EDA Tools
 
-+ [Day 2️⃣: Good Floorplan vs Bad floorplan and Introduction to Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
++ [Day 2️⃣ : Good Floorplan vs Bad floorplan and Introduction to Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
   - Chipfloor Planning Considerations
   - Library Binding and Placements
   - Cell Design & Characterization flows
   - General Timing Characterization Parameters
 
-+ [Day 3️⃣: Design Library cell using Magic Layout and NGSpice Characterization](#design-library-cell-using-magic-layout-and-ngspice-characterization)
++ [Day 3️⃣ : Design Library cell using Magic Layout and NGSpice Characterization](#design-library-cell-using-magic-layout-and-ngspice-characterization)
   - Labs for CMOS inverter ngspice simulations
   - Inception of layout and CMOS Fabrication Process
   - Sky130 Tech file labs
 
-+ [Day 4️⃣: Pre-Layout Timing Analysis and Importance of good clock tree](#pre-Layout-timing-analysis-and-importance-of-good-clock-tree)
++ [Day 4️⃣ : Pre-Layout Timing Analysis and Importance of good clock tree](#pre-Layout-timing-analysis-and-importance-of-good-clock-tree)
   - Timing Modelling using Delay Tables
   - Timing analysis with Ideal Clocks(OpenSTA)
   - Clock Tree Synthesis TritonCTS and signal integrity
   - Timing analysis with Real Clocks(OpenSTA)
 
-+ [Day 5️⃣: Final Steps of RTL2GDS using tritonroute and OpenSTA](#final-steps-of-rtl2gds-using-tritonroute-and-opensta)
++ [Day 5️⃣ : Final Steps of RTL2GDS using tritonroute and OpenSTA](#final-steps-of-rtl2gds-using-tritonroute-and-opensta)
   - Routing and Design Rule Check (DRC)
   - Power Distribution Network (PDN) & Routing
   - Triton Route Features
