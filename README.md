@@ -12,7 +12,7 @@ You can check out the documentation, including in-depth guides and reference man
 
 
 # TABLE OF CONTENTS
-+ [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK
 
 + [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
 
