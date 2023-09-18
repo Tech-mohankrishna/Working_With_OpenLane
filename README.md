@@ -15,13 +15,13 @@ You can check out the documentation, including in-depth guides and reference man
 
 + [Day 1️⃣: Inception of open-source EDA, OpenLANE and Sky130 PDK](#inception-of-open-source-eda-openlane-and-sky130-pdk)
 
-+ [Day 2️⃣: Good Floorplan vs Bad floorplan & Introduction to Library Cells](#good-floorplan-vs-bad-floorplan-&-introduction-to-library-cells)
++ [Day 2️⃣: Good Floorplan vs Bad floorplan and Introduction to Library Cells](#good-floorplan-vs-bad-floorplan-and-introduction-to-library-cells)
 
 + [Day 3️⃣: Design Library cell using Magic Layout and NGSpice Characterization](#design-library-cell-using-magic-layout-and-ngspice-characterization)
 
-+ [Day 4️⃣: Pre-Layout Timing Analysis & Importance of good clock tree](#pre-Layout-timing-analysis-&-importance-of-good-clock-tree)
++ [Day 4️⃣: Pre-Layout Timing Analysis and Importance of good clock tree](#pre-Layout-timing-analysis-and-importance-of-good-clock-tree)
 
-+ [Day 5️⃣: Final Steps of RTL2GDS using tritonroute and OpenSTA](#introduction-to-risc-v-isa-and-gnu-compiler-toolchain)
++ [Day 5️⃣: Final Steps of RTL2GDS using tritonroute and OpenSTA](#final-steps-of-rtl2gds-using-tritonroute-and-opensta)
 
 <br>
 <br>
@@ -132,7 +132,7 @@ Here's a detailed ASIC design flow using OpenLane and the associated tools and s
 
 # 📌 DAY-2
 
-# Good Floorplan vs Bad floorplan & Introduction to Library Cells
+# Good Floorplan vs Bad floorplan and Introduction to Library Cells
 
 
 ## Chip Floorplanning Considerations
@@ -454,7 +454,7 @@ The results obtained from the graph are :
 
 # 📌 DAY-4
 
-#  Pre-Layout Timing Analysis & Importance of good clock tree
+#  Pre-Layout Timing Analysis and Importance of good clock tree
 <br>
 
 ## Extraction of LEF 
