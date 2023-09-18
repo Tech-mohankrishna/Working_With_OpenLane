@@ -564,8 +564,8 @@ For the design to be complete, the worst negative slack needs to be above or equ
 4. Optimize the fanout value with OpenLANE tool
 
 Since we have synthesised the core using our vsdinv cell too and as it got successfully synthesized, it should be visible in layout after ```run_placement``` stage which is followed after ```run_floorplan``` stage
+![final-inver-image](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/44453008-4016-4100-a940-1a33106cc5ca)
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/8893a21d-26c6-4b36-bbc4-a2b9c1637cfb)
 
 ## Clock Tree Synthesis
 
@@ -574,7 +574,8 @@ Since we have synthesised the core using our vsdinv cell too and as it got succe
 - now in the openlane flow, continue with ```run_flooorplan``` ```run_placement``` ```run_cts```
 
 - To ensure that the cts step has added buffers and modified the netlist
-    ![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/69ddb549-d4bb-41e0-836c-686f2c375b1c)
+  ![run_cts_directtory](https://github.com/Tech-mohankrishna/Working_With_OpenLane/assets/57735263/a80c7c04-6647-44cf-a7b8-b9bafc0431d8)
+
 
 ## Post CTS- STA Analysis
 
