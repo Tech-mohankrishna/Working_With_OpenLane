@@ -187,9 +187,6 @@ Certainly, here's a more concise version of the considerations for chip floorpla
 
 Now in openlane, enter ```run_floorplan``` and the results will be updated at the runs folder
 
-![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/18b2cb6b-9915-4e58-b314-8d00260f47c7)
-
-(0 0) in DIE AREA Indicates top-left corner co-ordinates and (660.685 671.405) indicates bottom-right corner of the die in micro-meters
 
 To view the layout of the floorplan, use the command ```magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &```
 
@@ -527,11 +524,6 @@ Change config file so that these libraries and lef file is used
 add the below 2 lines in the initial stage of interactive flow and ```run_synthesis```  to see if our inverter has been used and find timing violations if any.
 
 
-
-The above figure shows that our vsdinv cell has been used in synthesis process
-
-![Screenshot from 2023-09-14 15-57-05](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/f18b35db-10d4-4f47-b3b7-8a3ef657d57f)
-
 since there is slack, we have to reduce it
 
 VLSI engineers will obtain system specifications in the architecture design phase. These specifications will determine a required frequency of operation. To analyze a circuit's timing performance designers will use static timing analysis tools (STA). When referring to pre clock tree synthesis STA analysis we are mainly concerned with setup timing in regards to a launch clock. STA will report problems such as worst negative slack (WNS) and total negative slack (TNS). These refer to the worst path delay and total path delay in regards to our setup timing restraint. Fixing slack violations can be debugged through performing STA analysis with OpenSTA, which is integrated in the OpenLANE tool. To describe these constraints to tools such as In order to ensure correct operation of these tools two steps must be taken:
@@ -546,11 +538,11 @@ For the design to be complete, the worst negative slack needs to be above or equ
     - Enabled SYNTH_STRATEGY with parameter as "DELAY 1"
     - The synthesis result is :
   
-    ![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/b4a26ed1-6ac8-449c-bc6e-31ed04470c4e)
+   
 
-    The slack has reduced a lot but still didnt meet the requirement. The sdc file used is [my_base.sdc](https://github.com/yagnavivek/PES_OpenLane_PD/blob/main/my_base.sdc) defined in [pre_sta.conf](https://github.com/yagnavivek/PES_OpenLane_PD/blob/main/pre_sta.conf) using the command ```sta pre_sta.conf```
+    The slack has reduced a lot but still didnt meet the requirement. The sdc file used is [my_base.sdc] defined in [pre_sta.conf] using the command ```sta pre_sta.conf```
 
-   ![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/f7356fd8-9c7c-4d99-88d6-67ceadfa774f)
+ 
 
     The delay is high when the fanout is high. Therefore we can re-run synthesis by changing the value of ```SYNTH_MAX_FANOUT``` variable
     
@@ -559,8 +551,7 @@ For the design to be complete, the worst negative slack needs to be above or equ
 
     - We can see which net is driving most outputs and replace the driver cell with larger form of its own kind
 
-    ![image](https://github.com/yagnavivek/PES_OpenLane_PD/assets/93475824/f4e05f1d-0c2c-404a-8b43-6b82a097d73d)
-
+  
 4. Optimize the fanout value with OpenLANE tool
 
 Since we have synthesised the core using our vsdinv cell too and as it got successfully synthesized, it should be visible in layout after ```run_placement``` stage which is followed after ```run_floorplan``` stage
